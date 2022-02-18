@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  /* --message-bg-color: rgba(54, 65, 167, 0.39); */
+  /* --container-bg-color: #988ae9; */
+  --message-text-color: #fff;
+  --message-bg-color: rgb(112, 123, 230);
+  --container-bg-color: #988ae9;
+  --user-join-left-bg-color: rgba(116, 73, 216, 0.692);
+  --max-width: 955px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(rgb(161, 159, 241), rgb(140, 99, 206));
+  height: 100vh;
+}
+
+nav h1 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: 100px;
+  margin: auto;
+  padding: 0;
+}
+
+.container {
+  background-image: url('../public/images/container-bg.png');
+  background-color: var(--container-bg-color);
+  background-size: cover;
+  background-blend-mode: overlay;
+  margin: auto;
+  height: 75vh;
+  max-width: var(--max-width);
+  border: #111 solid 2px;
+  padding: 20px;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+.message {
+  background-color: var(--message-bg-color);
+  color: var(--message-text-color);
+  display: inline-block;
+  clear: both;
+  margin: 5px;
+  padding: 5px 10px;
+  border: #111 1px solid;
+  border-radius: 5px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.middle {
+  display: inline-block;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.new-user {
+  display: flex;
+  /* text-align: center; */
+  clear: both;
+  margin: 10px 30%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--user-join-left-bg-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+.send {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+#send-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.send #messageInp {
+  height: 35px;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  padding: 5px 15px;
+}
+.send #messageInp:active, .send #messageInp:valid {
+  outline: none;
+}
+
+.send .btn {
+  cursor: pointer;
+  height: 35px;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+}
