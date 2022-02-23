@@ -1,0 +1,222 @@
+:root {
+  --container-color: rgba(0, 0, 0, 0.75);
+  --text-color: #b3b3b3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #b3b3b3;
+}
+
+body {
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.showcase-top {
+  position: relative;
+  padding: 25px 5%;
+  height: 100px;
+  z-index: 1;
+}
+
+.anchor-logo {
+  position: absolute;
+  height: 45px;
+}
+.anchor-logo .logo {
+  height: 100%;
+}
+
+.container input {
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  border: 0;
+  outline: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.container h1 {
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.container .btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #e50914;
+  padding: 10px 20px;
+  border: 0;
+  margin-top: 30px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.container .checkbox {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+}
+.container .checkbox-span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+.container .checkbox-span a {
+  text-decoration: none;
+}
+.container .checkbox-span a:hover {
+  text-decoration: underline;
+}
+
+.container .new-to-netflix,
+.container .already-a-user {
+  display: inline-block;
+  padding: 50px 0 30px;
+  color: #666;
+}
+
+.container .new-to-netflix a,
+.container .already-a-user a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
+.container .new-to-netflix a:hover,
+.container .already-a-user a:hover {
+  text-decoration: underline;
+}
+
+.container p {
+  font-size: 0.8rem;
+  color: #8c8c8c;
+  line-height: 1.3;
+}
+
+.container p a {
+  text-decoration: none;
+  color: #0071eb;
+}
+
+.container p a:hover {
+  text-decoration: underline;
+}
+
+
+
+.footer,
+.footer a {
+  color: #777;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.footer p {
+  color: #777;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer li {
+  line-height: 0;
+  list-style: none;
+}
+
+@media (min-width: 740px) {
+  .showcase {
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/ed0b5df9-ba9d-4534-bd09-57993daeda56/1c62fa7f-27da-453c-bcfc-4ffb726de69c/IN-en-20220214-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 100%;
+    width: 100vw;
+    z-index: -2;
+  }
+
+  .showcase::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    margin-bottom: -200px;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 60px 50px 250px rgba(0, 0, 0, 0.35),
+      inset -60px -50px 250px rgba(0, 0, 0, 0.35);
+  }
+
+  .container {
+    position: relative;
+    background-color: var(--container-color);
+    width: 450px;
+    padding: 50px 75px;
+    margin: auto;
+    height: 600px;
+    border-radius: 5px;
+    margin-bottom: 100px;
+    z-index: 1;
+  }
+
+  /* Footer */
+
+  .footer-container {
+    position: relative;
+    background-color: var(--container-color);
+    z-index: 2;
+    height: 200px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 50px 15%;
+    bottom: 0;
+  }
+
+  .footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+}
+
+@media (max-width: 739px) {
+  .container {
+    height: 550px;
+    padding: 20px 5%;
+  }
+
+  .footer-container {
+    position: relative;
+    height: 200px;
+  }
+
+  .footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .footer {
+    padding: 5%;
+    border-top: #777 1px solid;
+  }
+
+}
