@@ -166,7 +166,7 @@ body {
 .input-form input:valid {
   outline: none;
 }
-.input-form button {
+.input-form a {
   position: absolute;
   height: 100%;
   max-width: 150px;
@@ -177,6 +177,9 @@ body {
   border: none;
   white-space: nowrap;
   padding: auto;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
 }
 
 .container {
